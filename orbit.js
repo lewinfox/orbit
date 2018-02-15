@@ -45,7 +45,6 @@ function setup() {
     canvasHeight = height;
     earth = new Body(width / 2, height / 2, 50, earthMass);
     moon = new Body(width / 2, 100, 10, moonMass);
-    moon2 = new Body(600, 700, 10, moonMass);
     moon.vel.set(moonXVel, moonYVel);
    // frameRate(2);
 }

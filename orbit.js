@@ -10,6 +10,9 @@ var separation = new p5.Vector(0, 0);
 var force = new p5.Vector(0, 0);
 var force2 = new p5.Vector(0, 0);
 
+// List of bodies in the system
+let bodies = []
+
 function Body(x, y, radius, mass) {
     this.pos = new p5.Vector(x, y);
     this.acc = new p5.Vector(0, 0);

@@ -2,7 +2,7 @@ console.log("orbit.js connected");
 
 var G = 1;
 var earthMass = 100;
-var moonMass = 1;
+var moonMass = 0.2;
 var moonXVel = 9.5;
 var moonYVel = 0;
 
@@ -16,12 +16,12 @@ function Body(x, y, radius, mass) {
     this.vel = new p5.Vector(0, 0);
     this.radius = radius;
     this.mass = mass;
-    
+
     this.show = function () {
         // Draw an ellipse at x, y
         ellipse(this.pos.x, this.pos.y, this.radius, this.radius);
     };
-    
+
     this.move = function (force) {
         this.acc = p5.Vector.div(force, this.mass);
         this.vel.add(this.acc);
@@ -70,4 +70,3 @@ function draw() {
         line(moon.pos.x, moon.pos.y, moon.pos.x + (moon.vel.x * 5), moon.pos.y + (moon.vel.y * 5));
     }
 }
-
